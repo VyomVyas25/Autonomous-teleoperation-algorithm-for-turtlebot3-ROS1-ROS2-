@@ -32,10 +32,10 @@ def avoid_obs(msg):
 
     for i in range(len(msg.ranges)):
         r = msg.ranges[i]
-        r = 2 if r > 2 else r
-        y = 1 - (r / 2)
+        r = 1.5 if r > 1.5 else r
+        y = 1 - (r / 1.5)
         dis_1.append(y)
-        max_vals.append((1 - y) * 2)
+        max_vals.append((1 - y) * 1.5)
 
     for i in range(len(msg.ranges)):
         if i <= 60 or i >= 300:
@@ -50,11 +50,11 @@ def avoid_obstacle():
     obs_lin=0
 
     for index in list(range(0, 61)) + list(range(300, 360)):
-        obs_lin = exp(dis_1[index] ) - 2
-        goal_ang = 4 / (1 + exp(-100 * (max_vals[index] - 2)))  # Calculator for goal angular velocity
-
-    k_lin = 0.7 - exp(obs_lin)  # Calculator for linear velocity due to obstacle
+        obs_lin = exp(dis_1[index] ) - 1.5
+        goal_ang = 4 / (1 + exp(-100 * (max_vals[index] - 1.5)))  # Calculator for goal angular velocity
+    
     obs_ang = abs(7.389 - exp(goal_ang)) * sum
+    k_lin = 0.94 - exp(obs_lin)  # Calculator for linear velocity due to obstacle
     k_ang = obs_ang + 0.225 * goal_ang * angle_diff
 
     vel.linear.x = 4 * k_lin * velocity  # Adjusting linear velocity
