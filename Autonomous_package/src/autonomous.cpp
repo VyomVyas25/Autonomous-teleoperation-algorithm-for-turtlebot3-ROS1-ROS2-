@@ -24,10 +24,8 @@ public:
     TurtlBot3()
         : Node("minmal_publsiher"), count_(0)
     {
-        subscription_1 = this->create_subscription<nav_msgs::msg::Odometry>(
-            "/odom", 10, std::bind(&TurtlBot3::topic_callback, this, _1));
-        subscription_2 = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/scan", 10, std::bind(&TurtlBot3::obs_avoid, this, _1));
+        subscription_1 = this->create_subscription<nav_msgs::msg::Odometry>("/odom", 10, std::bind(&TurtlBot3::topic_callback, this, _1));
+        subscription_2 = this->create_subscription<sensor_msgs::msg::LaserScan>("/scan", 10, std::bind(&TurtlBot3::obs_avoid, this, _1));
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
         timer_ = this->create_wall_timer(50ms, std::bind(&TurtlBot3::timer_callback, this));
         TurtlBot3::set_goal();
@@ -36,7 +34,7 @@ public:
 
 private:
     float x_self, y_self, x_goal, y_goal, theta_self;
-    long double x, dis_1, sum, m, n;
+    long double x, obj_dis, sum, m, n,g_dist,max;
     void topic_callback(nav_msgs::msg::Odometry msg)
     {
         x_self = msg.pose.pose.position.x;
@@ -44,42 +42,26 @@ private:
         theta_self = quatToEuler(msg.pose.pose.orientation);
     }
 
-    void obs_avoid(const sensor_msgs::msg::LaserScan &msg)
+void obs_avoid(const sensor_msgs::msg::LaserScan &msg)
     {
-        long double i = 0, k = 0;
+        long double i = 0;
         sum = 0;
         for (long double x : msg.ranges) // LiDAR data
         {
-            if (x > 1.5)
+            x = (x > 2) ? 2 : x;
+            obj_dis = 1 - x / 2;
+            max = (1 - obj_dis) * 2;
+            scan.push_back(obj_dis);
+
+            if (i < 76 || i > 284)
             {
-                x = 1.5;
+                sum -= 6 * obj_dis * (i < 76 ? i : i - 359); // calculation of angle of obstacle
             }
-            if ((i > 65) && (i < 295))
-            {
-                k = 0;
-            }
-            else
-            {
-                if (i <= 65) // only range of +60 to -60
-                {
-                    k = i;
-                }
-                else
-                {
-                    k = i - 359;
-                }
-            }
-            dis_1 = 1 - (x / 1.5);
-            scan.push_back(dis_1);
-            sum -= dis_1 * k; // sum for deciding the turning angle of the bot due to obstacle
             i++;
-            // cout << 1/sum << " ";
-            //   cout << x << "\n";
-            //   cout<< 1-(x/1.6   ) << "\n";
-            //   float k_obs = exp(1 - sum) - 1;
         }
         scan.clear();
     }
+
 
     void set_goal()
     {
@@ -87,6 +69,7 @@ private:
         cin >> x_goal;
         cout << "Enter y coord:" << endl;
         cin >> y_goal;
+        g_dist = sqrt(pow(x_goal - x_self, 2) + pow(y_goal - y_self, 2)); // g_dist of initial posn and final posn
     }
 
     double quatToEuler(const geometry_msgs::msg::Quaternion &quaternion)
@@ -100,12 +83,11 @@ private:
 
     void timer_callback()
     {
-        double dis, angle, vel = 0, angle_diff = 0, k_lin, k_ang, obs_lin, obs_ang, goal_ang;
+        double g_dis, angle, vel = 0, angle_diff = 0, k_lin, obs_lin, obs_ang, k_ang, goal_ang;
         auto message = geometry_msgs::msg::Twist();
-        dis = sqrt(pow(x_goal - x_self, 2) + pow(y_goal - y_self, 2));
-        if (dis > 0.01)
+        g_dis = sqrt(pow(x_goal - x_self, 2) + pow(y_goal - y_self, 2));
+        if (g_dis > 0.01)
         {
-            vel = 0.2 * dis;
             angle = atan2(y_goal - y_self, x_goal - x_self) - theta_self;
             if (angle > 3.14)
             {
@@ -113,35 +95,36 @@ private:
             }
             else if (angle < -3.14)
             {
-                angle = angle + 6.28;
+                angle = angle + 6.28; // angle for avoiding infinity
             }
-            angle_diff = 0.45 * angle; // angle differnce of the current posn and goal posn
-
-            obs_lin = (exp(this->dis_1) - 1.5);
-            if (vel > 0.5)
+            if (abs(angle) > 2.093)
             {
-                vel = 0.5;
+                angle_diff = -0.45 * abs(angle);
             }
-            obs_ang = sum / 750;
-            cout << obs_ang << " ";
-            // cout << obs_ang << " ";
-            // cout << k_lin*vel << " ";
-            goal_ang = exp(1) - exp(obs_ang); // calculator for goal angular velocity
-            // cout << goal_ang << " ";
-            k_lin = 1.43 - exp(obs_lin);                           // calculator for linear velocity due to obstacle
-            k_ang = 0.795 * goal_ang * angle_diff + 1.8 * obs_ang; // total angular veloctiy
-            // cout << k_ang << " ";
-            message.linear.x = 2 * k_lin * vel; // adjusting linear velocity
+            else
+            {
+                angle_diff = 0.45 * angle; // angle differnce of the current posn and goal posn
+            }            
+            if (angle_diff > 0.4)
+            {
+                angle_diff = 0.4 * angle_diff / abs(angle_diff); // limiting goal angular velocity
+            }
+
+            vel = (g_dis / g_dist > 0.5) ? 0.5 : (g_dis / g_dist);
+            obs_lin = (exp(this->obj_dis) - 2);
+            k_lin = 0.7 - exp(obs_lin); // calculator for linear velocity due to obstacle
+
+            goal_ang = 4 / (1 + exp(-100 * (max - 2))); // calculator for goal angular velocity
+            obs_ang = abs(7.389 - exp(goal_ang)) * sum;
+            k_ang = obs_ang + 0.225 * goal_ang * angle_diff;
+
+            message.linear.x = 4.5 * k_lin * vel; // adjusting linear velocity
             message.angular.z = k_ang;
-            if (abs(message.angular.z) > 0.4)
+            if (abs(message.angular.z) > 0.5)
             {
-                message.angular.z = 0.4 * abs(message.angular.z) / message.angular.z;
+                message.angular.z = 0.5 * abs(message.angular.z) / message.angular.z; // limiting the resultant angular velocity
             }
-            // cout << message.angular.z << " ";
             publisher_->publish(message);
-
-            // RCLCPP_INFO(this->get_logger(), "lin_vel : %lf", vel);
-            // RCLCPP_INFO(this->get_logger(), "ang_vel : %lf", angle_diff);
         }
 
         else
