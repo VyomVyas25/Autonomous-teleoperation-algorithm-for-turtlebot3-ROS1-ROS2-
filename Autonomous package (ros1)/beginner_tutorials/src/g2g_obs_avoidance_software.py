@@ -23,9 +23,10 @@ def pose_twist_callback(odom_msg):
     elif angle < -pi:
         angle += 2 * pi  # Angle for avoiding infinity
     angle_diff = min(0.4, 0.45 * abs(angle))*(1 if angle>0 else -1)
+    angle_diff = -abs(angle_diff) if angle>2*pi/3 else angle_diff
 
 def avoid_obs(msg):
-    global sum, dis_1, max_vals
+    global sum, dis_1, max_vals, obs_lin, goal_ang
     sum = 0
     dis_1 = []
     max_vals = []
@@ -40,24 +41,24 @@ def avoid_obs(msg):
     for i in range(len(msg.ranges)):
         if i <= 60 or i >= 300:
             sum -= 6 * dis_1[i] * (i if i <= 60 else i - 360)
-
-def avoid_obstacle():
-    global velocity, vel, angle_diff, k_lin, obs_lin, obs_ang, k_ang, goal_ang
-    velocity = dis / orig_dis
-    velocity = min(0.5, abs(velocity))*(1 if velocity>0 else -1)  # Limit the velocity to 0.5
-
+   
     goal_ang=0
     obs_lin=0
-
     for index in list(range(0, 61)) + list(range(300, 360)):
         obs_lin = exp(dis_1[index] ) - 1.5
         goal_ang = 4 / (1 + exp(-100 * (max_vals[index] - 1.5)))  # Calculator for goal angular velocity
     
+
+def avoid_obstacle():
+    global velocity, vel, angle_diff, k_lin, obs_ang, k_ang, goal_ang
+    velocity = dis / orig_dis
+    velocity = min(0.5, abs(velocity))*(1 if velocity>0 else -1)  # Limit the velocity to 0.5
+
     obs_ang = abs(7.389 - exp(goal_ang)) * sum
     k_lin = 0.94 - exp(obs_lin)  # Calculator for linear velocity due to obstacle
-    k_ang = obs_ang + 0.225 * goal_ang * angle_diff
+    k_ang = obs_ang + 0.3 * goal_ang * angle_diff
 
-    vel.linear.x = 4 * k_lin * velocity  # Adjusting linear velocity
+    vel.linear.x = 3.5 * k_lin * velocity  # Adjusting linear velocity
     vel.angular.z = k_ang
     vel.angular.z = min(0.4, abs(vel.angular.z)) * (1 if vel.angular.z > 0 else -1)  # Limiting the resultant angular velocity
     pub.publish(vel)
