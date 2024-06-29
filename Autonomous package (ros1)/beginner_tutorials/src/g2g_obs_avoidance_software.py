@@ -46,7 +46,7 @@ def avoid_obs(msg):
     obs_lin=0
     for index in list(range(0, 61)) + list(range(300, 360)):
         obs_lin = exp(dis_1[index] ) - 1.5
-        goal_ang = 4 / (1 + exp(-100 * (max_vals[index] - 1.5)))  # Calculator for goal angular velocity
+        goal_ang = 4 / (1 + exp(-5 * (max_vals[index] - 1.5)))  # Calculator for goal angular velocity
     
 
 def avoid_obstacle():
