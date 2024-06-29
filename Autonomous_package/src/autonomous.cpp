@@ -34,7 +34,7 @@ public:
 
 private:
     float x_self, y_self, x_goal, y_goal, theta_self;
-    long double x, obj_dis, sum, m, n,g_dist,max;
+    long double x, obj_dis, sum, m, n, g_dist, max;
     void topic_callback(nav_msgs::msg::Odometry msg)
     {
         x_self = msg.pose.pose.position.x;
@@ -42,7 +42,7 @@ private:
         theta_self = quatToEuler(msg.pose.pose.orientation);
     }
 
-void obs_avoid(const sensor_msgs::msg::LaserScan &msg)
+    void obs_avoid(const sensor_msgs::msg::LaserScan &msg)
     {
         long double i = 0;
         sum = 0;
@@ -61,7 +61,6 @@ void obs_avoid(const sensor_msgs::msg::LaserScan &msg)
         }
         scan.clear();
     }
-
 
     void set_goal()
     {
@@ -83,50 +82,33 @@ void obs_avoid(const sensor_msgs::msg::LaserScan &msg)
 
     void timer_callback()
     {
-        double g_dis, angle, vel = 0, angle_diff = 0, k_lin, obs_lin, obs_ang, k_ang, goal_ang;
+        double g_dis, angle, vel = 0, angle_diff = 0, k_lin, obs_lin, lin_vel, obs_ang, k_ang, goal_ang;
         auto message = geometry_msgs::msg::Twist();
         g_dis = sqrt(pow(x_goal - x_self, 2) + pow(y_goal - y_self, 2));
         if (g_dis > 0.01)
         {
             angle = atan2(y_goal - y_self, x_goal - x_self) - theta_self;
-            if (angle > 3.14)
+            if (abs(angle) > 3.14)
             {
-                angle = angle - 6.28;
+                angle = angle - (abs(angle) / angle) * 6.28;
             }
-            else if (angle < -3.14)
-            {
-                angle = angle + 6.28; // angle for avoiding infinity
-            }
-            if (abs(angle) > 2.093)
-            {
-                angle_diff = -0.45 * abs(angle);
-            }
-            else
-            {
-                angle_diff = 0.45 * angle; // angle differnce of the current posn and goal posn
-            }            
-            if (angle_diff > 0.4)
-            {
-                angle_diff = 0.4 * angle_diff / abs(angle_diff); // limiting goal angular velocity
-            }
+
+            angle_diff = (abs(angle) > 2.093) ? -0.45 * abs(angle) : 0.45 * angle;             // angle differnce of the current posn and goal posn
+            angle_diff = (angle_diff > 0.4) ? 0.4 * angle_diff / abs(angle_diff) : angle_diff; // limiting goal angular velocity
 
             vel = (g_dis / g_dist > 0.5) ? 0.5 : (g_dis / g_dist);
             obs_lin = (exp(this->obj_dis) - 2);
             k_lin = 0.7 - exp(obs_lin); // calculator for linear velocity due to obstacle
+            lin_vel = 4.5 * k_lin * vel;
 
-            goal_ang = 4 / (1 + exp(-100 * (max - 2))); // calculator for goal angular velocity
+            goal_ang = 4 / (1 + exp(-5 * (max - 2))); // calculator for goal angular velocity
             obs_ang = abs(7.389 - exp(goal_ang)) * sum;
-            k_ang = obs_ang + 0.225 * goal_ang * angle_diff;
+            k_ang = obs_ang + 0.275 * goal_ang * angle_diff;
 
-            message.linear.x = 4.5 * k_lin * vel; // adjusting linear velocity
-            message.angular.z = k_ang;
-            if (abs(message.angular.z) > 0.5)
-            {
-                message.angular.z = 0.5 * abs(message.angular.z) / message.angular.z; // limiting the resultant angular velocity
-            }
+            message.linear.x = (abs(lin_vel) > 0.65) ? 0.65 * abs(lin_vel) / lin_vel : lin_vel; // adjusting linear velocity
+            message.angular.z = (abs(k_ang) > 0.5) ? 0.5 * abs(k_ang) / k_ang : k_ang;          // limiting the resultant angular velocity
             publisher_->publish(message);
         }
-
         else
         {
             set_goal();
