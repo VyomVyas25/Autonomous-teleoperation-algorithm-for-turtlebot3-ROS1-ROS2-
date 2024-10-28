@@ -34,8 +34,8 @@ def avoid_obs(msg):
 
 def avoid_obstacle():
     global dis_1
-    val_max_1 = min(y[0:61])
-    val_max_2 = min(y[300:360])
+    val_max_1 = min(y[0:45])
+    val_max_2 = min(y[315:360])
     val_min_i = y.index(min(val_max_1, val_max_2)) 
 
     try:  
@@ -43,8 +43,8 @@ def avoid_obstacle():
     except ZeroDivisionError:
         x1 = 0
 
-    val_max_a = (val_min_i + x1) % len(y)
-    dis_1 = min(1.65 if v>= 1.65 or math.isinf(v) else v for v in y[300:] + y[:61])
+    val_max_a = (val_min_i + (0.1*x1)) % len(y)
+    dis_1 = min(1.65 if v>= 1.65 or math.isinf(v) else v for v in y[315:] + y[:46])
     angle_diff_1 = atan2(sin(val_max_a - val_min_i), cos(val_max_a - val_min_i))
 
 
@@ -52,7 +52,7 @@ def avoid_obstacle():
     k_ang = 4 / (1 + exp(-5 * (dis_1 - 1.65)))
     k_obs = abs(7.389 - exp(k_ang))
     v1 = 4 * (1-exp(exp(1-(dis_1/1.65))-1.65)) * k_goal
-    v2 = 0.6*k_ang*angle_diff +  k_obs * angle_diff_1
+    v2 = 0.6*k_ang*angle_diff +  1.8 * k_obs * angle_diff_1
     print(k_ang)
 
     vel.linear.x = min(0.5,abs(v1)) * (1 if v1>0 else -1)
