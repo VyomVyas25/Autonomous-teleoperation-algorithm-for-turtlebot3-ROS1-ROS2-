@@ -17,7 +17,7 @@ private:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     {
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = msg->axes[1];  // Left joystick vertical axis
+        twist.linear.x = msg->axes[3];  // Right joystick vertical axis
         twist.angular.z = msg->axes[4]; // Right joystick horizontal axis
         publisher_->publish(twist);
     }
