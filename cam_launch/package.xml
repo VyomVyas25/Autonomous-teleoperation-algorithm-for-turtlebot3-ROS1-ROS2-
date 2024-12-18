@@ -1,0 +1,18 @@
+<package format="3">
+  <name>my_launch_files</name>
+  <version>0.0.0</version>
+  <description>Launch files for webcam feed with viewer</description>
+  <maintainer email="your_email@example.com">your_name</maintainer>
+  <license>License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>image_tools</depend>
+  <depend>image_view</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+
