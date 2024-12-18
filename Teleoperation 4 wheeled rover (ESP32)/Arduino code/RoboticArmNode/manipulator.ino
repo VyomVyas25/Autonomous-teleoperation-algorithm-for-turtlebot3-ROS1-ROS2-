@@ -6,16 +6,16 @@
 #include <rclc/executor.h>
 #include <geometry_msgs/msg/twist.h>
 
-#define MOTOR1_PWM_PIN 13
-#define MOTOR1_DIR_PIN 12
-#define MOTOR2_PWM_PIN 14
-#define MOTOR2_DIR_PIN 26
+#define MOTOR1_PWM_PIN 19
+#define MOTOR1_DIR_PIN 21
+#define MOTOR2_PWM_PIN 15
+#define MOTOR2_DIR_PIN 4
 #define MOTOR3_PWM_PIN 25
-#define MOTOR3_DIR_PIN 33
-#define MOTOR4_PWM_PIN 5
-#define MOTOR4_DIR_PIN 18
-#define MOTOR5_PWM_PIN 19
-#define MOTOR5_DIR_PIN 22
+#define MOTOR3_DIR_PIN 26
+#define MOTOR4_PWM_PIN 14
+#define MOTOR4_DIR_PIN 27
+#define MOTOR5_PWM_PIN 12
+#define MOTOR5_DIR_PIN 13
 #define STEPPER_DIR_PIN 4
 #define STEPPER_STEP_PIN 16
 
@@ -65,7 +65,7 @@ void setupMotors() {
 }
 
 void controlMotors(const geometry_msgs__msg__Twist *cmd) {
-  int speed = 128; // Fixed speed (half of 255)
+  int speed = 200; // Fixed speed (half of 255)
   bool dir = cmd->angular.z > 0.1 ? HIGH : (cmd->angular.z < -0.1 ? LOW : -1);
 
   if (dir != -1) {
@@ -109,5 +109,5 @@ void setup() {
 }
 
 void loop() {
-  RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
+  RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(10)));
 }
