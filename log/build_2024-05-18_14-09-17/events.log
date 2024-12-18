@@ -1,0 +1,1234 @@
+[0.000000] (-) TimerEvent: {}
+[0.000332] (-) JobUnselected: {'identifier': 'micro_ros_setup'}
+[0.000439] (micro_ros_msgs) JobQueued: {'identifier': 'micro_ros_msgs', 'dependencies': OrderedDict()}
+[0.000460] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict([('micro_ros_msgs', '/home/vyom/microros_ws/install/micro_ros_msgs')])}
+[0.000479] (micro_ros_msgs) JobStarted: {'identifier': 'micro_ros_msgs'}
+[0.010609] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'cmake'}
+[0.010834] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/vyom/microros_ws/src/uros/micro_ros_msgs', '-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli', '-DCMAKE_INSTALL_PREFIX=/home/vyom/microros_ws/install/micro_ros_msgs'], 'cwd': '/home/vyom/microros_ws/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'vyom'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/vyom/ros2_ws/install/p9n_test/lib:/home/vyom/ros2_ws/install/p9n_node/lib:/home/vyom/ros2_ws/install/p9n_example/lib:/home/vyom/ros2_ws/install/p9n_interface/lib:/home/vyom/install/examples_rclcpp_wait_set/lib:/home/vyom/install/examples_rclcpp_minimal_subscriber/lib:/home/vyom/install/examples_rclcpp_minimal_composition/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/vyom'), ('OLDPWD', '/home/vyom'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1346'), ('SYSTEMD_EXEC_PID', '1690'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5802'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vyom/microros_ws/install:/home/vyom/turtlebot3_ws/install:/home/vyom/ros2_ws/install:/home/vyom/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vyom'), ('JOURNAL_STREAM', '8:35873'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vyom'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/vyom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:@/tmp/.ICE-unix/1489,unix/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:/tmp/.ICE-unix/1489'), ('INVOCATION_ID', '351c8f3a57f4417aac7a172deeb939aa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JL4QN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:8f81dbcd-1e24-4008-9eac-32b66e978c21'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vyom/microros_ws/build/micro_ros_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vyom/ros2_ws/install/p9n_bringup/lib/python3.10/site-packages:/home/vyom/install/launch_testing_examples/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[0.021821] (micro_ros_msgs) StdoutLine: {'line': b'Not searching for unused variables given on the command line.\n'}
+[0.071969] (micro_ros_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099495] (-) TimerEvent: {}
+[0.133579] (micro_ros_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.143134] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199698] (-) TimerEvent: {}
+[0.220116] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.228393] (micro_ros_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.228640] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.229028] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.232004] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299857] (-) TimerEvent: {}
+[0.319885] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.328883] (micro_ros_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.329080] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.329521] (micro_ros_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.334572] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399966] (-) TimerEvent: {}
+[0.500249] (-) TimerEvent: {}
+[0.515526] (micro_ros_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.600406] (-) TimerEvent: {}
+[0.648862] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.660548] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.676709] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.700537] (-) TimerEvent: {}
+[0.754035] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.800641] (-) TimerEvent: {}
+[0.818960] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.900786] (-) TimerEvent: {}
+[1.001036] (-) TimerEvent: {}
+[1.101306] (-) TimerEvent: {}
+[1.147979] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.201607] (-) TimerEvent: {}
+[1.302080] (-) TimerEvent: {}
+[1.355119] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.402170] (-) TimerEvent: {}
+[1.502432] (-) TimerEvent: {}
+[1.602734] (-) TimerEvent: {}
+[1.611831] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.637634] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.644090] (micro_ros_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.677054] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.677280] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.677345] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.677394] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.700258] (micro_ros_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.702800] (-) TimerEvent: {}
+[1.749259] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.754750] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.759084] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.764918] (micro_ros_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.792164] (micro_ros_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.794242] (micro_ros_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/vyom/microros_ws/build/micro_ros_msgs\n'}
+[1.799603] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[1.800152] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'build'}
+[1.800907] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vyom/microros_ws/build/micro_ros_msgs', '--', '-j8', '-l8'], 'cwd': '/home/vyom/microros_ws/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'vyom'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/vyom/ros2_ws/install/p9n_test/lib:/home/vyom/ros2_ws/install/p9n_node/lib:/home/vyom/ros2_ws/install/p9n_example/lib:/home/vyom/ros2_ws/install/p9n_interface/lib:/home/vyom/install/examples_rclcpp_wait_set/lib:/home/vyom/install/examples_rclcpp_minimal_subscriber/lib:/home/vyom/install/examples_rclcpp_minimal_composition/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/vyom'), ('OLDPWD', '/home/vyom'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1346'), ('SYSTEMD_EXEC_PID', '1690'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5802'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vyom/microros_ws/install:/home/vyom/turtlebot3_ws/install:/home/vyom/ros2_ws/install:/home/vyom/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vyom'), ('JOURNAL_STREAM', '8:35873'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vyom'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/vyom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:@/tmp/.ICE-unix/1489,unix/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:/tmp/.ICE-unix/1489'), ('INVOCATION_ID', '351c8f3a57f4417aac7a172deeb939aa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JL4QN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:8f81dbcd-1e24-4008-9eac-32b66e978c21'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vyom/microros_ws/build/micro_ros_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vyom/ros2_ws/install/p9n_bringup/lib/python3.10/site-packages:/home/vyom/install/launch_testing_examples/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[1.802878] (-) TimerEvent: {}
+[1.844906] (micro_ros_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.856341] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.866895] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_micro_ros_msgs\n'}
+[1.903030] (-) TimerEvent: {}
+[2.003337] (-) TimerEvent: {}
+[2.103633] (-) TimerEvent: {}
+[2.168777] (micro_ros_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.169478] (micro_ros_msgs) StdoutLine: {'line': b'creating micro_ros_msgs.egg-info\n'}
+[2.169719] (micro_ros_msgs) StdoutLine: {'line': b'writing micro_ros_msgs.egg-info/PKG-INFO\n'}
+[2.169975] (micro_ros_msgs) StdoutLine: {'line': b'writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt\n'}
+[2.170147] (micro_ros_msgs) StdoutLine: {'line': b'writing top-level names to micro_ros_msgs.egg-info/top_level.txt\n'}
+[2.170376] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.174197] (micro_ros_msgs) StdoutLine: {'line': b"reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.174837] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[2.203746] (-) TimerEvent: {}
+[2.208305] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_micro_ros_msgs_egg\n'}
+[2.303877] (-) TimerEvent: {}
+[2.335426] (micro_ros_msgs) StdoutLine: {'line': b'[  4%] Built target micro_ros_msgs__cpp\n'}
+[2.339706] (micro_ros_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/node__functions.c.o\x1b[0m\n'}
+[2.341261] (micro_ros_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/graph__functions.c.o\x1b[0m\n'}
+[2.342607] (micro_ros_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_c.dir/rosidl_generator_c/micro_ros_msgs/msg/detail/entity__functions.c.o\x1b[0m\n'}
+[2.352905] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.353455] (micro_ros_msgs) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.353617] (micro_ros_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.403970] (-) TimerEvent: {}
+[2.436381] (micro_ros_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libmicro_ros_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.482852] (micro_ros_msgs) StdoutLine: {'line': b'[ 19%] Built target micro_ros_msgs__rosidl_generator_c\n'}
+[2.500732] (micro_ros_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.501028] (micro_ros_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.501223] (micro_ros_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.504094] (-) TimerEvent: {}
+[2.604466] (-) TimerEvent: {}
+[2.707133] (-) TimerEvent: {}
+[2.807433] (-) TimerEvent: {}
+[2.907751] (-) TimerEvent: {}
+[2.913522] (micro_ros_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/node__type_support.cpp.o\x1b[0m\n'}
+[2.918427] (micro_ros_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/entity__type_support.cpp.o\x1b[0m\n'}
+[2.924217] (micro_ros_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/micro_ros_msgs/msg/detail/graph__type_support.cpp.o\x1b[0m\n'}
+[2.991715] (micro_ros_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/graph__type_support.cpp.o\x1b[0m\n'}
+[3.007901] (-) TimerEvent: {}
+[3.108401] (-) TimerEvent: {}
+[3.189867] (micro_ros_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/graph__type_support.cpp.o\x1b[0m\n'}
+[3.208515] (-) TimerEvent: {}
+[3.250707] (micro_ros_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/node__type_support.cpp.o\x1b[0m\n'}
+[3.253126] (micro_ros_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/graph__type_support.cpp.o\x1b[0m\n'}
+[3.307960] (micro_ros_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/micro_ros_msgs/msg/entity__type_support.cpp.o\x1b[0m\n'}
+[3.308630] (-) TimerEvent: {}
+[3.324062] (micro_ros_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/graph__type_support.c.o\x1b[0m\n'}
+[3.332183] (micro_ros_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/graph__type_support_c.cpp.o\x1b[0m\n'}
+[3.399417] (micro_ros_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/node__type_support.c.o\x1b[0m\n'}
+[3.401426] (micro_ros_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.408774] (-) TimerEvent: {}
+[3.522754] (-) TimerEvent: {}
+[3.526176] (micro_ros_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/micro_ros_msgs/msg/detail/entity__type_support.c.o\x1b[0m\n'}
+[3.542138] (micro_ros_msgs) StdoutLine: {'line': b'[ 53%] Built target micro_ros_msgs__rosidl_typesupport_c\n'}
+[3.567194] (micro_ros_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/node__type_support_c.cpp.o\x1b[0m\n'}
+[3.622863] (-) TimerEvent: {}
+[3.708516] (micro_ros_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking C shared library libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.722989] (-) TimerEvent: {}
+[3.765882] (micro_ros_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/node__type_support.cpp.o\x1b[0m\n'}
+[3.811768] (micro_ros_msgs) StdoutLine: {'line': b'[ 59%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c\n'}
+[3.823135] (-) TimerEvent: {}
+[3.835110] (micro_ros_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/micro_ros_msgs/msg/entity__type_support.cpp.o\x1b[0m\n'}
+[3.923273] (-) TimerEvent: {}
+[3.966984] (micro_ros_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/node__type_support.cpp.o\x1b[0m\n'}
+[4.023446] (-) TimerEvent: {}
+[4.079146] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/micro_ros_msgs/msg/detail/dds_fastrtps/entity__type_support.cpp.o\x1b[0m\n'}
+[4.123619] (-) TimerEvent: {}
+[4.220838] (micro_ros_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/micro_ros_msgs/msg/detail/entity__type_support_c.cpp.o\x1b[0m\n'}
+[4.223721] (-) TimerEvent: {}
+[4.324214] (-) TimerEvent: {}
+[4.379793] (micro_ros_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.424354] (-) TimerEvent: {}
+[4.494216] (micro_ros_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.526123] (-) TimerEvent: {}
+[4.560685] (micro_ros_msgs) StdoutLine: {'line': b'[ 72%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.574446] (micro_ros_msgs) StdoutLine: {'line': b'[ 72%] Built target micro_ros_msgs__rosidl_typesupport_cpp\n'}
+[4.626252] (-) TimerEvent: {}
+[4.726664] (-) TimerEvent: {}
+[4.776319] (micro_ros_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.826836] (-) TimerEvent: {}
+[4.870159] (micro_ros_msgs) StdoutLine: {'line': b'[ 74%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c\n'}
+[4.926950] (-) TimerEvent: {}
+[4.969020] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.027059] (-) TimerEvent: {}
+[5.052499] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[5.074841] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs\n'}
+[5.097671] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.127187] (-) TimerEvent: {}
+[5.227535] (-) TimerEvent: {}
+[5.327836] (-) TimerEvent: {}
+[5.428087] (-) TimerEvent: {}
+[5.528365] (-) TimerEvent: {}
+[5.628674] (-) TimerEvent: {}
+[5.637116] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] Built target micro_ros_msgs__py\n'}
+[5.659483] (micro_ros_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_node_s.c.o\x1b[0m\n'}
+[5.659710] (micro_ros_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_graph_s.c.o\x1b[0m\n'}
+[5.659816] (micro_ros_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_generator_py.dir/rosidl_generator_py/micro_ros_msgs/msg/_entity_s.c.o\x1b[0m\n'}
+[5.728854] (-) TimerEvent: {}
+[5.794142] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[5.828973] (-) TimerEvent: {}
+[5.840216] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] Built target micro_ros_msgs__rosidl_generator_py\n'}
+[5.862729] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.862904] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.862977] (micro_ros_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/micro_ros_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.929140] (-) TimerEvent: {}
+[5.953279] (micro_ros_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.953436] (micro_ros_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.956198] (micro_ros_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.988563] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[5.988808] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext\n'}
+[5.991088] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.001380] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[6.029250] (-) TimerEvent: {}
+[6.129571] (-) TimerEvent: {}
+[6.130629] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'install'}
+[6.143667] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vyom/microros_ws/build/micro_ros_msgs'], 'cwd': '/home/vyom/microros_ws/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'vyom'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/vyom/ros2_ws/install/p9n_test/lib:/home/vyom/ros2_ws/install/p9n_node/lib:/home/vyom/ros2_ws/install/p9n_example/lib:/home/vyom/ros2_ws/install/p9n_interface/lib:/home/vyom/install/examples_rclcpp_wait_set/lib:/home/vyom/install/examples_rclcpp_minimal_subscriber/lib:/home/vyom/install/examples_rclcpp_minimal_composition/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/vyom'), ('OLDPWD', '/home/vyom'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1346'), ('SYSTEMD_EXEC_PID', '1690'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5802'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vyom/microros_ws/install:/home/vyom/turtlebot3_ws/install:/home/vyom/ros2_ws/install:/home/vyom/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vyom'), ('JOURNAL_STREAM', '8:35873'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vyom'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/vyom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:@/tmp/.ICE-unix/1489,unix/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:/tmp/.ICE-unix/1489'), ('INVOCATION_ID', '351c8f3a57f4417aac7a172deeb939aa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JL4QN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:8f81dbcd-1e24-4008-9eac-32b66e978c21'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vyom/microros_ws/build/micro_ros_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vyom/ros2_ws/install/p9n_bringup/lib/python3.10/site-packages:/home/vyom/install/launch_testing_examples/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[6.152456] (micro_ros_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.152615] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs\n'}
+[6.152707] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.152766] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.152841] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h\n'}
+[6.152904] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h\n'}
+[6.152955] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.153029] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.c\n'}
+[6.153095] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h\n'}
+[6.153149] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h\n'}
+[6.153223] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h\n'}
+[6.153280] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h\n'}
+[6.153334] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.c\n'}
+[6.153418] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h\n'}
+[6.153512] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h\n'}
+[6.153568] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h\n'}
+[6.153621] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.c\n'}
+[6.153699] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h\n'}
+[6.153781] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h\n'}
+[6.153833] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h\n'}
+[6.153947] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.154041] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh\n'}
+[6.154141] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv\n'}
+[6.154246] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so\n'}
+[6.154688] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so" to ""\n'}
+[6.154839] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.154900] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.154955] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.155037] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h\n'}
+[6.155095] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h\n'}
+[6.155150] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h\n'}
+[6.155228] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.155353] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[6.155501] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.155588] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.155680] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.155737] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.155792] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.c\n'}
+[6.155865] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.c\n'}
+[6.155957] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h\n'}
+[6.156012] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h\n'}
+[6.156112] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.c\n'}
+[6.156166] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h\n'}
+[6.156219] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.156293] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\n'}
+[6.156465] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.156553] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so\n'}
+[6.156745] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so" to ""\n'}
+[6.156826] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.156884] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.156997] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.157073] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp\n'}
+[6.157138] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp\n'}
+[6.157194] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp\n'}
+[6.157248] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp\n'}
+[6.157326] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp\n'}
+[6.157384] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp\n'}
+[6.157460] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp\n'}
+[6.157516] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp\n'}
+[6.157592] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp\n'}
+[6.157647] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp\n'}
+[6.157722] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp\n'}
+[6.157777] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp\n'}
+[6.157883] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.157962] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.158014] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.158679] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.158752] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.158809] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.158890] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/dds_fastrtps\n'}
+[6.158947] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.159056] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.159332] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[6.159387] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[6.159461] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[6.159513] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[6.159578] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.159629] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.159703] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.159753] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.cpp\n'}
+[6.159802] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.cpp\n'}
+[6.159869] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.cpp\n'}
+[6.159937] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[6.160263] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[6.160360] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so\n'}
+[6.160476] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[6.160541] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh\n'}
+[6.160607] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv\n'}
+[6.160693] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info\n'}
+[6.160793] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[6.160860] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[6.160924] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/PKG-INFO\n'}
+[6.160990] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/top_level.txt\n'}
+[6.161083] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs\n'}
+[6.161146] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py\n'}
+[6.161209] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.161290] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.161365] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[6.161442] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.161521] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.161602] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[6.161686] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.161761] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg\n'}
+[6.161824] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py\n'}
+[6.161888] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c\n'}
+[6.161990] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c\n'}
+[6.162060] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py\n'}
+[6.162177] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c\n'}
+[6.162255] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py\n'}
+[6.162325] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py\n'}
+[6.204100] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...\n"}
+[6.204310] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py'...\n"}
+[6.204377] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...\n"}
+[6.204440] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py'...\n"}
+[6.204494] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py'...\n"}
+[6.204540] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py'...\n"}
+[6.204587] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py'...\n"}
+[6.208290] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.208513] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.208608] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.208785] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.208888] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.209109] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.209203] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[6.209320] (micro_ros_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so" to ""\n'}
+[6.209395] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl\n'}
+[6.209486] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl\n'}
+[6.209570] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl\n'}
+[6.209659] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg\n'}
+[6.209765] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg\n'}
+[6.209922] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg\n'}
+[6.210121] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs\n'}
+[6.210406] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs\n'}
+[6.210524] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh\n'}
+[6.210669] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv\n'}
+[6.210751] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh\n'}
+[6.210837] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv\n'}
+[6.210922] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash\n'}
+[6.211013] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh\n'}
+[6.211083] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh\n'}
+[6.211167] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv\n'}
+[6.211244] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv\n'}
+[6.211351] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs\n'}
+[6.211463] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake\n'}
+[6.211556] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.211650] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.211736] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.211830] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.211918] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.212009] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake\n'}
+[6.212097] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.212189] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake\n'}
+[6.212279] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.212365] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.212460] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.212594] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.212687] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[6.212772] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.212863] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake\n'}
+[6.212949] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[6.213033] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[6.213112] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.213192] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.213276] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.213359] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.213441] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.213528] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.213609] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake\n'}
+[6.213674] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake\n'}
+[6.213751] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.xml\n'}
+[6.215435] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[6.229746] (-) TimerEvent: {}
+[6.329979] (-) TimerEvent: {}
+[6.385185] (micro_ros_msgs) JobEnded: {'identifier': 'micro_ros_msgs', 'rc': 0}
+[6.386199] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[6.399350] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[6.399517] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '/home/vyom/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent', '-DUAGENT_BUILD_EXECUTABLE=OFF', '-DUAGENT_P2P_PROFILE=OFF', '--no-warn-unused-cli', '-DCMAKE_INSTALL_PREFIX=/home/vyom/microros_ws/install/micro_ros_agent'], 'cwd': '/home/vyom/microros_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'vyom'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs/lib:/home/vyom/ros2_ws/install/p9n_test/lib:/home/vyom/ros2_ws/install/p9n_node/lib:/home/vyom/ros2_ws/install/p9n_example/lib:/home/vyom/ros2_ws/install/p9n_interface/lib:/home/vyom/install/examples_rclcpp_wait_set/lib:/home/vyom/install/examples_rclcpp_minimal_subscriber/lib:/home/vyom/install/examples_rclcpp_minimal_composition/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/vyom'), ('OLDPWD', '/home/vyom'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1346'), ('SYSTEMD_EXEC_PID', '1690'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5802'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vyom/microros_ws/install:/home/vyom/turtlebot3_ws/install:/home/vyom/ros2_ws/install:/home/vyom/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vyom'), ('JOURNAL_STREAM', '8:35873'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vyom'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/vyom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:@/tmp/.ICE-unix/1489,unix/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:/tmp/.ICE-unix/1489'), ('INVOCATION_ID', '351c8f3a57f4417aac7a172deeb939aa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JL4QN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs:/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:8f81dbcd-1e24-4008-9eac-32b66e978c21'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vyom/microros_ws/build/micro_ros_agent'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/vyom/ros2_ws/install/p9n_bringup/lib/python3.10/site-packages:/home/vyom/install/launch_testing_examples/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs:/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[6.408259] (micro_ros_agent) StdoutLine: {'line': b'Not searching for unused variables given on the command line.\n'}
+[6.430105] (-) TimerEvent: {}
+[6.462696] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[6.468261] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[6.530207] (-) TimerEvent: {}
+[6.536715] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[6.544115] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[6.544290] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[6.544604] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[6.595915] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[6.601802] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[6.630358] (-) TimerEvent: {}
+[6.682518] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.688814] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[6.688985] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[6.689401] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.724857] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.727409] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[6.727826] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/vyom/microros_ws/build/micro_ros_agent\n'}
+[6.730491] (-) TimerEvent: {}
+[6.731570] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[6.732016] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[6.732275] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vyom/microros_ws/build/micro_ros_agent', '--', '-j8', '-l8'], 'cwd': '/home/vyom/microros_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'vyom'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs/lib:/home/vyom/ros2_ws/install/p9n_test/lib:/home/vyom/ros2_ws/install/p9n_node/lib:/home/vyom/ros2_ws/install/p9n_example/lib:/home/vyom/ros2_ws/install/p9n_interface/lib:/home/vyom/install/examples_rclcpp_wait_set/lib:/home/vyom/install/examples_rclcpp_minimal_subscriber/lib:/home/vyom/install/examples_rclcpp_minimal_composition/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/vyom'), ('OLDPWD', '/home/vyom'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1346'), ('SYSTEMD_EXEC_PID', '1690'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5802'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vyom/microros_ws/install:/home/vyom/turtlebot3_ws/install:/home/vyom/ros2_ws/install:/home/vyom/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vyom'), ('JOURNAL_STREAM', '8:35873'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vyom'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/vyom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:@/tmp/.ICE-unix/1489,unix/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:/tmp/.ICE-unix/1489'), ('INVOCATION_ID', '351c8f3a57f4417aac7a172deeb939aa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JL4QN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs:/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:8f81dbcd-1e24-4008-9eac-32b66e978c21'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vyom/microros_ws/build/micro_ros_agent'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/vyom/ros2_ws/install/p9n_bringup/lib/python3.10/site-packages:/home/vyom/install/launch_testing_examples/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs:/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[6.781731] (micro_ros_agent) StdoutLine: {'line': b"[  6%] \x1b[34m\x1b[1mCreating directories for 'xrceagent'\x1b[0m\n"}
+[6.830641] (-) TimerEvent: {}
+[6.857678] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mPerforming download step (git clone) for 'xrceagent'\x1b[0m\n"}
+[6.884633] (micro_ros_agent) StderrLine: {'line': b"Cloning into 'xrceagent'...\n"}
+[6.930796] (-) TimerEvent: {}
+[7.031368] (-) TimerEvent: {}
+[7.131789] (-) TimerEvent: {}
+[7.232343] (-) TimerEvent: {}
+[7.332846] (-) TimerEvent: {}
+[7.433339] (-) TimerEvent: {}
+[7.533817] (-) TimerEvent: {}
+[7.634356] (-) TimerEvent: {}
+[7.734877] (-) TimerEvent: {}
+[7.835397] (-) TimerEvent: {}
+[7.935913] (-) TimerEvent: {}
+[8.036379] (-) TimerEvent: {}
+[8.136989] (-) TimerEvent: {}
+[8.237574] (-) TimerEvent: {}
+[8.338129] (-) TimerEvent: {}
+[8.438692] (-) TimerEvent: {}
+[8.539186] (-) TimerEvent: {}
+[8.639602] (-) TimerEvent: {}
+[8.740047] (-) TimerEvent: {}
+[8.840554] (-) TimerEvent: {}
+[8.941066] (-) TimerEvent: {}
+[9.041547] (-) TimerEvent: {}
+[9.141968] (-) TimerEvent: {}
+[9.242402] (-) TimerEvent: {}
+[9.342862] (-) TimerEvent: {}
+[9.443297] (-) TimerEvent: {}
+[9.543802] (-) TimerEvent: {}
+[9.644298] (-) TimerEvent: {}
+[9.744726] (-) TimerEvent: {}
+[9.845159] (-) TimerEvent: {}
+[9.945597] (-) TimerEvent: {}
+[10.046218] (-) TimerEvent: {}
+[10.146766] (-) TimerEvent: {}
+[10.247262] (-) TimerEvent: {}
+[10.347803] (-) TimerEvent: {}
+[10.448375] (-) TimerEvent: {}
+[10.548939] (-) TimerEvent: {}
+[10.649484] (-) TimerEvent: {}
+[10.750026] (-) TimerEvent: {}
+[10.850500] (-) TimerEvent: {}
+[10.951168] (-) TimerEvent: {}
+[11.051650] (-) TimerEvent: {}
+[11.152180] (-) TimerEvent: {}
+[11.252630] (-) TimerEvent: {}
+[11.353208] (-) TimerEvent: {}
+[11.453737] (-) TimerEvent: {}
+[11.554197] (-) TimerEvent: {}
+[11.654604] (-) TimerEvent: {}
+[11.752280] (micro_ros_agent) StderrLine: {'line': b"Switched to a new branch 'ros2'\n"}
+[11.752479] (micro_ros_agent) StdoutLine: {'line': b"Branch 'ros2' set up to track remote branch 'ros2' from 'origin'.\n"}
+[11.754723] (-) TimerEvent: {}
+[11.808859] (micro_ros_agent) StdoutLine: {'line': b"[ 18%] \x1b[34m\x1b[1mPerforming update step for 'xrceagent'\x1b[0m\n"}
+[11.854919] (-) TimerEvent: {}
+[11.955463] (-) TimerEvent: {}
+[12.055953] (-) TimerEvent: {}
+[12.156341] (-) TimerEvent: {}
+[12.256716] (-) TimerEvent: {}
+[12.357174] (-) TimerEvent: {}
+[12.457725] (-) TimerEvent: {}
+[12.558444] (-) TimerEvent: {}
+[12.658890] (-) TimerEvent: {}
+[12.759329] (-) TimerEvent: {}
+[12.859762] (-) TimerEvent: {}
+[12.960219] (-) TimerEvent: {}
+[13.060680] (-) TimerEvent: {}
+[13.161112] (-) TimerEvent: {}
+[13.187220] (micro_ros_agent) StderrLine: {'line': b'HEAD is now at c25243c Enable Domain Override on Reference and XML Participant (#351)\n'}
+[13.227922] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo patch step for 'xrceagent'\x1b[0m\n"}
+[13.256991] (micro_ros_agent) StdoutLine: {'line': b"[ 31%] \x1b[34m\x1b[1mPerforming configure step for 'xrceagent'\x1b[0m\n"}
+[13.261253] (-) TimerEvent: {}
+[13.265305] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/vyom/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake\n'}
+[13.318944] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[13.325035] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[13.361403] (-) TimerEvent: {}
+[13.390558] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[13.396531] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[13.396767] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[13.397179] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[13.444967] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[13.451080] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[13.461532] (-) TimerEvent: {}
+[13.526992] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[13.533821] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[13.534230] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[13.534836] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[13.543259] (micro_ros_agent) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[13.561670] (-) TimerEvent: {}
+[13.613646] (micro_ros_agent) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[13.613840] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[13.661860] (-) TimerEvent: {}
+[13.682264] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[13.683062] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[13.697099] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.698897] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[13.699431] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/vyom/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[13.718946] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mPerforming build step for 'xrceagent'\x1b[0m\n"}
+[13.760691] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mCreating directories for 'uagent'\x1b[0m\n"}
+[13.761976] (-) TimerEvent: {}
+[13.835985] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo download step for 'uagent'\x1b[0m\n"}
+[13.861498] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mNo update step for 'uagent'\x1b[0m\n"}
+[13.862034] (-) TimerEvent: {}
+[13.884611] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mNo patch step for 'uagent'\x1b[0m\n"}
+[13.914879] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mPerforming configure step for 'uagent'\x1b[0m\n"}
+[13.928560] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/vyom/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/uagent-prefix/tmp/uagent-cache-.cmake\n'}
+[13.933235] (micro_ros_agent) StdoutLine: {'line': b"-- Setting build type to 'Release' as none was specified.\n"}
+[13.962183] (-) TimerEvent: {}
+[13.976861] (micro_ros_agent) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[13.977050] (micro_ros_agent) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (tinyxml2)\n'}
+[13.977105] (micro_ros_agent) StderrLine: {'line': b'  does not match the name of the calling package (TinyXML2).  This can lead\n'}
+[13.977152] (micro_ros_agent) StderrLine: {'line': b'  to problems in calling code that expects `find_package` result variables\n'}
+[13.977198] (micro_ros_agent) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[13.977242] (micro_ros_agent) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[13.977285] (micro_ros_agent) StderrLine: {'line': b'  cmake/modules/FindTinyXML2.cmake:40 (find_package_handle_standard_args)\n'}
+[13.977328] (micro_ros_agent) StderrLine: {'line': b'  /opt/ros/humble/share/fastrtps/cmake/fastrtps-config.cmake:51 (find_package)\n'}
+[13.977372] (micro_ros_agent) StderrLine: {'line': b'  CMakeLists.txt:153 (find_package)\n'}
+[13.977415] (micro_ros_agent) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[13.977458] (micro_ros_agent) StderrLine: {'line': b'\x1b[0m\n'}
+[13.977501] (micro_ros_agent) StdoutLine: {'line': b'-- Found tinyxml2: /usr/lib/x86_64-linux-gnu/libtinyxml2.so  \n'}
+[14.042392] (micro_ros_agent) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[14.050052] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[14.058658] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[14.059382] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/vyom/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[14.062252] (-) TimerEvent: {}
+[14.077091] (micro_ros_agent) StdoutLine: {'line': b"[ 75%] \x1b[34m\x1b[1mPerforming build step for 'uagent'\x1b[0m\n"}
+[14.126847] (micro_ros_agent) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Root.cpp.o\x1b[0m\n'}
+[14.127148] (micro_ros_agent) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/participant/Participant.cpp.o\x1b[0m\n'}
+[14.127420] (micro_ros_agent) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/topic/Topic.cpp.o\x1b[0m\n'}
+[14.127603] (micro_ros_agent) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/client/ProxyClient.cpp.o\x1b[0m\n'}
+[14.127964] (micro_ros_agent) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/processor/Processor.cpp.o\x1b[0m\n'}
+[14.128355] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Agent.cpp.o\x1b[0m\n'}
+[14.128672] (micro_ros_agent) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/AgentInstance.cpp.o\x1b[0m\n'}
+[14.130237] (micro_ros_agent) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/publisher/Publisher.cpp.o\x1b[0m\n'}
+[14.162594] (-) TimerEvent: {}
+[14.262944] (-) TimerEvent: {}
+[14.363275] (-) TimerEvent: {}
+[14.463671] (-) TimerEvent: {}
+[14.564089] (-) TimerEvent: {}
+[14.664456] (-) TimerEvent: {}
+[14.764871] (-) TimerEvent: {}
+[14.865322] (-) TimerEvent: {}
+[14.965752] (-) TimerEvent: {}
+[15.066177] (-) TimerEvent: {}
+[15.166584] (-) TimerEvent: {}
+[15.266985] (-) TimerEvent: {}
+[15.367380] (-) TimerEvent: {}
+[15.467847] (-) TimerEvent: {}
+[15.568237] (-) TimerEvent: {}
+[15.668632] (-) TimerEvent: {}
+[15.769112] (-) TimerEvent: {}
+[15.869561] (-) TimerEvent: {}
+[15.970236] (-) TimerEvent: {}
+[16.070589] (-) TimerEvent: {}
+[16.078277] (micro_ros_agent) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/subscriber/Subscriber.cpp.o\x1b[0m\n'}
+[16.091394] (micro_ros_agent) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/datawriter/DataWriter.cpp.o\x1b[0m\n'}
+[16.138722] (micro_ros_agent) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/datareader/DataReader.cpp.o\x1b[0m\n'}
+[16.170721] (-) TimerEvent: {}
+[16.271150] (-) TimerEvent: {}
+[16.371569] (-) TimerEvent: {}
+[16.472017] (-) TimerEvent: {}
+[16.572508] (-) TimerEvent: {}
+[16.672925] (-) TimerEvent: {}
+[16.773339] (-) TimerEvent: {}
+[16.873759] (-) TimerEvent: {}
+[16.974178] (-) TimerEvent: {}
+[17.074601] (-) TimerEvent: {}
+[17.175010] (-) TimerEvent: {}
+[17.275394] (-) TimerEvent: {}
+[17.375834] (-) TimerEvent: {}
+[17.476262] (-) TimerEvent: {}
+[17.576709] (-) TimerEvent: {}
+[17.677112] (-) TimerEvent: {}
+[17.777534] (-) TimerEvent: {}
+[17.877997] (-) TimerEvent: {}
+[17.978431] (-) TimerEvent: {}
+[18.078855] (-) TimerEvent: {}
+[18.099179] (micro_ros_agent) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/requester/Requester.cpp.o\x1b[0m\n'}
+[18.178990] (-) TimerEvent: {}
+[18.279439] (-) TimerEvent: {}
+[18.379869] (-) TimerEvent: {}
+[18.480352] (-) TimerEvent: {}
+[18.580802] (-) TimerEvent: {}
+[18.681264] (-) TimerEvent: {}
+[18.781711] (-) TimerEvent: {}
+[18.882257] (-) TimerEvent: {}
+[18.982740] (-) TimerEvent: {}
+[19.083179] (-) TimerEvent: {}
+[19.183603] (-) TimerEvent: {}
+[19.283998] (-) TimerEvent: {}
+[19.384439] (-) TimerEvent: {}
+[19.484893] (-) TimerEvent: {}
+[19.585298] (-) TimerEvent: {}
+[19.685737] (-) TimerEvent: {}
+[19.786161] (-) TimerEvent: {}
+[19.886589] (-) TimerEvent: {}
+[19.986988] (-) TimerEvent: {}
+[20.087367] (-) TimerEvent: {}
+[20.187821] (-) TimerEvent: {}
+[20.291448] (-) TimerEvent: {}
+[20.391898] (-) TimerEvent: {}
+[20.492371] (-) TimerEvent: {}
+[20.592940] (-) TimerEvent: {}
+[20.693344] (-) TimerEvent: {}
+[20.793753] (-) TimerEvent: {}
+[20.894181] (-) TimerEvent: {}
+[20.903332] (micro_ros_agent) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/replier/Replier.cpp.o\x1b[0m\n'}
+[20.994280] (-) TimerEvent: {}
+[21.095230] (-) TimerEvent: {}
+[21.195632] (-) TimerEvent: {}
+[21.296073] (-) TimerEvent: {}
+[21.396502] (-) TimerEvent: {}
+[21.496943] (-) TimerEvent: {}
+[21.597381] (-) TimerEvent: {}
+[21.697822] (-) TimerEvent: {}
+[21.798265] (-) TimerEvent: {}
+[21.898713] (-) TimerEvent: {}
+[21.999164] (-) TimerEvent: {}
+[22.099552] (-) TimerEvent: {}
+[22.199951] (-) TimerEvent: {}
+[22.300365] (-) TimerEvent: {}
+[22.400847] (-) TimerEvent: {}
+[22.472190] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/object/XRCEObject.cpp.o\x1b[0m\n'}
+[22.502411] (-) TimerEvent: {}
+[22.602846] (-) TimerEvent: {}
+[22.703314] (-) TimerEvent: {}
+[22.787419] (micro_ros_agent) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/XRCETypes.cpp.o\x1b[0m\n'}
+[22.803459] (-) TimerEvent: {}
+[22.903880] (-) TimerEvent: {}
+[23.004315] (-) TimerEvent: {}
+[23.104770] (-) TimerEvent: {}
+[23.205159] (-) TimerEvent: {}
+[23.305560] (-) TimerEvent: {}
+[23.405994] (-) TimerEvent: {}
+[23.471840] (micro_ros_agent) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/MessageHeader.cpp.o\x1b[0m\n'}
+[23.506124] (-) TimerEvent: {}
+[23.606546] (-) TimerEvent: {}
+[23.706952] (-) TimerEvent: {}
+[23.807364] (-) TimerEvent: {}
+[23.907828] (-) TimerEvent: {}
+[24.008241] (-) TimerEvent: {}
+[24.108710] (-) TimerEvent: {}
+[24.209161] (-) TimerEvent: {}
+[24.309569] (-) TimerEvent: {}
+[24.410008] (-) TimerEvent: {}
+[24.419628] (micro_ros_agent) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/SubMessageHeader.cpp.o\x1b[0m\n'}
+[24.510144] (-) TimerEvent: {}
+[24.610636] (-) TimerEvent: {}
+[24.711071] (-) TimerEvent: {}
+[24.791889] (micro_ros_agent) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/message/InputMessage.cpp.o\x1b[0m\n'}
+[24.811204] (-) TimerEvent: {}
+[24.911631] (-) TimerEvent: {}
+[24.977672] (micro_ros_agent) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/message/OutputMessage.cpp.o\x1b[0m\n'}
+[25.011765] (-) TimerEvent: {}
+[25.112186] (-) TimerEvent: {}
+[25.212605] (-) TimerEvent: {}
+[25.313053] (-) TimerEvent: {}
+[25.373107] (micro_ros_agent) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/utils/ArgumentParser.cpp.o\x1b[0m\n'}
+[25.413225] (-) TimerEvent: {}
+[25.513653] (-) TimerEvent: {}
+[25.614090] (-) TimerEvent: {}
+[25.714470] (-) TimerEvent: {}
+[25.814894] (-) TimerEvent: {}
+[25.915341] (-) TimerEvent: {}
+[26.015804] (-) TimerEvent: {}
+[26.116263] (-) TimerEvent: {}
+[26.216703] (-) TimerEvent: {}
+[26.221032] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/Server.cpp.o\x1b[0m\n'}
+[26.316853] (-) TimerEvent: {}
+[26.417385] (-) TimerEvent: {}
+[26.517873] (-) TimerEvent: {}
+[26.618351] (-) TimerEvent: {}
+[26.718814] (-) TimerEvent: {}
+[26.819243] (-) TimerEvent: {}
+[26.919672] (-) TimerEvent: {}
+[27.020091] (-) TimerEvent: {}
+[27.120534] (-) TimerEvent: {}
+[27.220982] (-) TimerEvent: {}
+[27.321404] (-) TimerEvent: {}
+[27.421833] (-) TimerEvent: {}
+[27.522269] (-) TimerEvent: {}
+[27.622687] (-) TimerEvent: {}
+[27.723118] (-) TimerEvent: {}
+[27.823551] (-) TimerEvent: {}
+[27.923997] (-) TimerEvent: {}
+[28.024422] (-) TimerEvent: {}
+[28.124849] (-) TimerEvent: {}
+[28.186384] (micro_ros_agent) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/stream_framing/StreamFramingProtocol.cpp.o\x1b[0m\n'}
+[28.224992] (-) TimerEvent: {}
+[28.325413] (-) TimerEvent: {}
+[28.425846] (-) TimerEvent: {}
+[28.455854] (micro_ros_agent) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/custom/CustomAgent.cpp.o\x1b[0m\n'}
+[28.526028] (-) TimerEvent: {}
+[28.626600] (-) TimerEvent: {}
+[28.644814] (micro_ros_agent) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/udp/UDPv4AgentLinux.cpp.o\x1b[0m\n'}
+[28.726740] (-) TimerEvent: {}
+[28.827155] (-) TimerEvent: {}
+[28.927566] (-) TimerEvent: {}
+[29.028017] (-) TimerEvent: {}
+[29.128495] (-) TimerEvent: {}
+[29.228922] (-) TimerEvent: {}
+[29.329331] (-) TimerEvent: {}
+[29.429757] (-) TimerEvent: {}
+[29.530185] (-) TimerEvent: {}
+[29.630609] (-) TimerEvent: {}
+[29.731031] (-) TimerEvent: {}
+[29.831478] (-) TimerEvent: {}
+[29.933652] (-) TimerEvent: {}
+[30.034088] (-) TimerEvent: {}
+[30.134489] (-) TimerEvent: {}
+[30.234901] (-) TimerEvent: {}
+[30.335820] (-) TimerEvent: {}
+[30.436252] (-) TimerEvent: {}
+[30.536695] (-) TimerEvent: {}
+[30.637169] (-) TimerEvent: {}
+[30.737588] (-) TimerEvent: {}
+[30.787974] (micro_ros_agent) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/udp/UDPv6AgentLinux.cpp.o\x1b[0m\n'}
+[30.837754] (-) TimerEvent: {}
+[30.938190] (-) TimerEvent: {}
+[31.038605] (-) TimerEvent: {}
+[31.086758] (micro_ros_agent) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/tcp/TCPv4AgentLinux.cpp.o\x1b[0m\n'}
+[31.138736] (-) TimerEvent: {}
+[31.239181] (-) TimerEvent: {}
+[31.339628] (-) TimerEvent: {}
+[31.440076] (-) TimerEvent: {}
+[31.540537] (-) TimerEvent: {}
+[31.641017] (-) TimerEvent: {}
+[31.650362] (micro_ros_agent) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/tcp/TCPv6AgentLinux.cpp.o\x1b[0m\n'}
+[31.741158] (-) TimerEvent: {}
+[31.841571] (-) TimerEvent: {}
+[31.942005] (-) TimerEvent: {}
+[32.042516] (-) TimerEvent: {}
+[32.142985] (-) TimerEvent: {}
+[32.178398] (micro_ros_agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/SerialAgentLinux.cpp.o\x1b[0m\n'}
+[32.243126] (-) TimerEvent: {}
+[32.343555] (-) TimerEvent: {}
+[32.443989] (-) TimerEvent: {}
+[32.544416] (-) TimerEvent: {}
+[32.644833] (-) TimerEvent: {}
+[32.745290] (-) TimerEvent: {}
+[32.845709] (-) TimerEvent: {}
+[32.946157] (-) TimerEvent: {}
+[33.046585] (-) TimerEvent: {}
+[33.147040] (-) TimerEvent: {}
+[33.247486] (-) TimerEvent: {}
+[33.347960] (-) TimerEvent: {}
+[33.448396] (-) TimerEvent: {}
+[33.548861] (-) TimerEvent: {}
+[33.649370] (-) TimerEvent: {}
+[33.749782] (-) TimerEvent: {}
+[33.850330] (-) TimerEvent: {}
+[33.950816] (-) TimerEvent: {}
+[34.051281] (-) TimerEvent: {}
+[34.151729] (-) TimerEvent: {}
+[34.252147] (-) TimerEvent: {}
+[34.352619] (-) TimerEvent: {}
+[34.453075] (-) TimerEvent: {}
+[34.553514] (-) TimerEvent: {}
+[34.653997] (-) TimerEvent: {}
+[34.754444] (-) TimerEvent: {}
+[34.854912] (-) TimerEvent: {}
+[34.955340] (-) TimerEvent: {}
+[35.055742] (-) TimerEvent: {}
+[35.156208] (-) TimerEvent: {}
+[35.256633] (-) TimerEvent: {}
+[35.357064] (-) TimerEvent: {}
+[35.457489] (-) TimerEvent: {}
+[35.557891] (-) TimerEvent: {}
+[35.658343] (-) TimerEvent: {}
+[35.758774] (-) TimerEvent: {}
+[35.859185] (-) TimerEvent: {}
+[35.934249] (micro_ros_agent) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/TermiosAgentLinux.cpp.o\x1b[0m\n'}
+[35.959318] (-) TimerEvent: {}
+[36.059727] (-) TimerEvent: {}
+[36.160136] (-) TimerEvent: {}
+[36.260561] (-) TimerEvent: {}
+[36.360974] (-) TimerEvent: {}
+[36.461392] (-) TimerEvent: {}
+[36.561846] (-) TimerEvent: {}
+[36.563514] (micro_ros_agent) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/MultiSerialAgentLinux.cpp.o\x1b[0m\n'}
+[36.661999] (-) TimerEvent: {}
+[36.762462] (-) TimerEvent: {}
+[36.862907] (-) TimerEvent: {}
+[36.963358] (-) TimerEvent: {}
+[37.063772] (-) TimerEvent: {}
+[37.164204] (-) TimerEvent: {}
+[37.265015] (-) TimerEvent: {}
+[37.283248] (micro_ros_agent) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/MultiTermiosAgentLinux.cpp.o\x1b[0m\n'}
+[37.365141] (-) TimerEvent: {}
+[37.465536] (-) TimerEvent: {}
+[37.566002] (-) TimerEvent: {}
+[37.666406] (-) TimerEvent: {}
+[37.766821] (-) TimerEvent: {}
+[37.835656] (micro_ros_agent) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/serial/PseudoTerminalAgentLinux.cpp.o\x1b[0m\n'}
+[37.866955] (-) TimerEvent: {}
+[37.967374] (-) TimerEvent: {}
+[38.067786] (-) TimerEvent: {}
+[38.168201] (-) TimerEvent: {}
+[38.268628] (-) TimerEvent: {}
+[38.369054] (-) TimerEvent: {}
+[38.469492] (-) TimerEvent: {}
+[38.569946] (-) TimerEvent: {}
+[38.670396] (-) TimerEvent: {}
+[38.770879] (-) TimerEvent: {}
+[38.871343] (-) TimerEvent: {}
+[38.939353] (micro_ros_agent) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/can/CanAgentLinux.cpp.o\x1b[0m\n'}
+[38.971474] (-) TimerEvent: {}
+[39.071908] (-) TimerEvent: {}
+[39.172332] (-) TimerEvent: {}
+[39.272749] (-) TimerEvent: {}
+[39.358537] (micro_ros_agent) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/discovery/DiscoveryServerLinux.cpp.o\x1b[0m\n'}
+[39.372900] (-) TimerEvent: {}
+[39.473374] (-) TimerEvent: {}
+[39.573830] (-) TimerEvent: {}
+[39.674331] (-) TimerEvent: {}
+[39.774792] (-) TimerEvent: {}
+[39.875244] (-) TimerEvent: {}
+[39.975695] (-) TimerEvent: {}
+[40.076142] (-) TimerEvent: {}
+[40.176571] (-) TimerEvent: {}
+[40.276995] (-) TimerEvent: {}
+[40.377413] (-) TimerEvent: {}
+[40.477852] (-) TimerEvent: {}
+[40.578278] (-) TimerEvent: {}
+[40.678756] (-) TimerEvent: {}
+[40.779176] (-) TimerEvent: {}
+[40.879597] (-) TimerEvent: {}
+[40.980018] (-) TimerEvent: {}
+[41.010253] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/transport/discovery/DiscoveryServer.cpp.o\x1b[0m\n'}
+[41.080151] (-) TimerEvent: {}
+[41.180578] (-) TimerEvent: {}
+[41.281085] (-) TimerEvent: {}
+[41.381663] (-) TimerEvent: {}
+[41.482147] (-) TimerEvent: {}
+[41.483693] (micro_ros_agent) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/types/TopicPubSubType.cpp.o\x1b[0m\n'}
+[41.582283] (-) TimerEvent: {}
+[41.682742] (-) TimerEvent: {}
+[41.783158] (-) TimerEvent: {}
+[41.883601] (-) TimerEvent: {}
+[41.984053] (-) TimerEvent: {}
+[42.084496] (-) TimerEvent: {}
+[42.184952] (-) TimerEvent: {}
+[42.285428] (-) TimerEvent: {}
+[42.385937] (-) TimerEvent: {}
+[42.486388] (-) TimerEvent: {}
+[42.524706] (micro_ros_agent) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/xmlobjects/xmlobjects.cpp.o\x1b[0m\n'}
+[42.586514] (-) TimerEvent: {}
+[42.686971] (-) TimerEvent: {}
+[42.787432] (-) TimerEvent: {}
+[42.887889] (-) TimerEvent: {}
+[42.988362] (-) TimerEvent: {}
+[43.051210] (micro_ros_agent) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fast/FastEntities.cpp.o\x1b[0m\n'}
+[43.088510] (-) TimerEvent: {}
+[43.188945] (-) TimerEvent: {}
+[43.289367] (-) TimerEvent: {}
+[43.389806] (-) TimerEvent: {}
+[43.490329] (-) TimerEvent: {}
+[43.590794] (-) TimerEvent: {}
+[43.691250] (-) TimerEvent: {}
+[43.791703] (-) TimerEvent: {}
+[43.892127] (-) TimerEvent: {}
+[43.992583] (-) TimerEvent: {}
+[44.093029] (-) TimerEvent: {}
+[44.165086] (micro_ros_agent) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fast/FastMiddleware.cpp.o\x1b[0m\n'}
+[44.193167] (-) TimerEvent: {}
+[44.293599] (-) TimerEvent: {}
+[44.394055] (-) TimerEvent: {}
+[44.494463] (-) TimerEvent: {}
+[44.545068] (micro_ros_agent) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fastdds/FastDDSEntities.cpp.o\x1b[0m\n'}
+[44.594592] (-) TimerEvent: {}
+[44.695091] (-) TimerEvent: {}
+[44.795574] (-) TimerEvent: {}
+[44.895995] (-) TimerEvent: {}
+[44.923915] (micro_ros_agent) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/middleware/fastdds/FastDDSMiddleware.cpp.o\x1b[0m\n'}
+[44.996123] (-) TimerEvent: {}
+[45.096545] (-) TimerEvent: {}
+[45.196992] (-) TimerEvent: {}
+[45.297457] (-) TimerEvent: {}
+[45.397892] (-) TimerEvent: {}
+[45.498317] (-) TimerEvent: {}
+[45.598737] (-) TimerEvent: {}
+[45.699161] (-) TimerEvent: {}
+[45.799578] (-) TimerEvent: {}
+[45.899974] (-) TimerEvent: {}
+[46.000389] (-) TimerEvent: {}
+[46.100822] (-) TimerEvent: {}
+[46.201229] (-) TimerEvent: {}
+[46.301636] (-) TimerEvent: {}
+[46.402095] (-) TimerEvent: {}
+[46.502503] (-) TimerEvent: {}
+[46.602911] (-) TimerEvent: {}
+[46.703301] (-) TimerEvent: {}
+[46.803709] (-) TimerEvent: {}
+[46.904135] (-) TimerEvent: {}
+[47.004524] (-) TimerEvent: {}
+[47.104919] (-) TimerEvent: {}
+[47.205298] (-) TimerEvent: {}
+[47.305673] (-) TimerEvent: {}
+[47.406109] (-) TimerEvent: {}
+[47.506528] (-) TimerEvent: {}
+[47.606902] (-) TimerEvent: {}
+[47.707288] (-) TimerEvent: {}
+[47.807688] (-) TimerEvent: {}
+[47.908098] (-) TimerEvent: {}
+[48.008498] (-) TimerEvent: {}
+[48.108891] (-) TimerEvent: {}
+[48.209307] (-) TimerEvent: {}
+[48.309716] (-) TimerEvent: {}
+[48.410148] (-) TimerEvent: {}
+[48.510577] (-) TimerEvent: {}
+[48.610957] (-) TimerEvent: {}
+[48.711323] (-) TimerEvent: {}
+[48.811740] (-) TimerEvent: {}
+[48.912226] (-) TimerEvent: {}
+[49.012909] (-) TimerEvent: {}
+[49.113433] (-) TimerEvent: {}
+[49.213971] (-) TimerEvent: {}
+[49.314355] (-) TimerEvent: {}
+[49.414832] (-) TimerEvent: {}
+[49.515207] (-) TimerEvent: {}
+[49.615601] (-) TimerEvent: {}
+[49.715997] (-) TimerEvent: {}
+[49.816372] (-) TimerEvent: {}
+[49.916762] (-) TimerEvent: {}
+[50.017154] (-) TimerEvent: {}
+[50.117491] (-) TimerEvent: {}
+[50.217818] (-) TimerEvent: {}
+[50.318147] (-) TimerEvent: {}
+[50.418457] (-) TimerEvent: {}
+[50.518780] (-) TimerEvent: {}
+[50.619110] (-) TimerEvent: {}
+[50.719429] (-) TimerEvent: {}
+[50.819751] (-) TimerEvent: {}
+[50.920096] (-) TimerEvent: {}
+[51.020420] (-) TimerEvent: {}
+[51.120776] (-) TimerEvent: {}
+[51.221133] (-) TimerEvent: {}
+[51.321508] (-) TimerEvent: {}
+[51.421846] (-) TimerEvent: {}
+[51.522269] (-) TimerEvent: {}
+[51.622612] (-) TimerEvent: {}
+[51.722933] (-) TimerEvent: {}
+[51.823251] (-) TimerEvent: {}
+[51.923585] (-) TimerEvent: {}
+[52.023931] (-) TimerEvent: {}
+[52.124280] (-) TimerEvent: {}
+[52.224585] (-) TimerEvent: {}
+[52.324892] (-) TimerEvent: {}
+[52.425181] (-) TimerEvent: {}
+[52.525504] (-) TimerEvent: {}
+[52.625866] (-) TimerEvent: {}
+[52.726165] (-) TimerEvent: {}
+[52.826481] (-) TimerEvent: {}
+[52.926794] (-) TimerEvent: {}
+[53.027117] (-) TimerEvent: {}
+[53.127425] (-) TimerEvent: {}
+[53.227749] (-) TimerEvent: {}
+[53.328261] (-) TimerEvent: {}
+[53.428668] (-) TimerEvent: {}
+[53.529000] (-) TimerEvent: {}
+[53.629319] (-) TimerEvent: {}
+[53.729604] (-) TimerEvent: {}
+[53.829973] (-) TimerEvent: {}
+[53.930255] (-) TimerEvent: {}
+[54.030573] (-) TimerEvent: {}
+[54.130869] (-) TimerEvent: {}
+[54.231157] (-) TimerEvent: {}
+[54.331445] (-) TimerEvent: {}
+[54.431733] (-) TimerEvent: {}
+[54.532019] (-) TimerEvent: {}
+[54.632518] (-) TimerEvent: {}
+[54.639096] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libmicroxrcedds_agent.so\x1b[0m\n'}
+[54.732707] (-) TimerEvent: {}
+[54.833014] (-) TimerEvent: {}
+[54.933339] (-) TimerEvent: {}
+[54.983980] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target microxrcedds_agent\n'}
+[55.009848] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mNo install step for 'uagent'\x1b[0m\n"}
+[55.033500] (-) TimerEvent: {}
+[55.038094] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mCompleted 'uagent'\x1b[0m\n"}
+[55.075183] (micro_ros_agent) StdoutLine: {'line': b'Built target uagent\n'}
+[55.101863] (micro_ros_agent) StdoutLine: {'line': b"[ 43%] \x1b[34m\x1b[1mPerforming install step for 'xrceagent'\x1b[0m\n"}
+[55.133637] (-) TimerEvent: {}
+[55.150711] (micro_ros_agent) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target microxrcedds_agent\x1b[0m\n'}
+[55.200645] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target microxrcedds_agent\n'}
+[55.220566] (micro_ros_agent) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[55.229859] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[55.230213] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4.1\n'}
+[55.233570] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4\n'}
+[55.233703] (-) TimerEvent: {}
+[55.233850] (micro_ros_agent) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_agent/lib/libmicroxrcedds_agent.so.2.4.1" to ""\n'}
+[55.234016] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/lib/libmicroxrcedds_agent.so\n'}
+[55.234219] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent\n'}
+[55.234303] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/topic\n'}
+[55.234370] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/topic/Topic.hpp\n'}
+[55.234549] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/p2p\n'}
+[55.234663] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/p2p/InternalClient.hpp\n'}
+[55.234751] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/p2p/InternalClientManager.hpp\n'}
+[55.234815] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/message\n'}
+[55.234938] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/message/Packet.hpp\n'}
+[55.235009] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/message/InputMessage.hpp\n'}
+[55.235074] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/message/OutputMessage.hpp\n'}
+[55.235137] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/requester\n'}
+[55.235232] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/requester/Requester.hpp\n'}
+[55.235341] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware\n'}
+[55.235409] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/ced\n'}
+[55.235473] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/ced/CedEntities.hpp\n'}
+[55.235580] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/ced/CedMiddleware.hpp\n'}
+[55.235648] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/fast\n'}
+[55.235753] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/fast/FastEntities.hpp\n'}
+[55.235826] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/fast/FastMiddleware.hpp\n'}
+[55.235901] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/Middleware.hpp\n'}
+[55.235977] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/utils\n'}
+[55.236042] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/utils/Callbacks.hpp\n'}
+[55.236130] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/fastdds\n'}
+[55.236195] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/fastdds/FastDDSEntities.hpp\n'}
+[55.236278] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/middleware/fastdds/FastDDSMiddleware.hpp\n'}
+[55.236358] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/replier\n'}
+[55.236423] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/replier/Replier.hpp\n'}
+[55.236492] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/AgentInstance.hpp\n'}
+[55.236566] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/visibility.hpp\n'}
+[55.236640] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/Agent.hpp\n'}
+[55.236738] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/datareader\n'}
+[55.236810] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/datareader/DataReader.hpp\n'}
+[55.236883] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/types\n'}
+[55.236959] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/types/SubMessageHeader.hpp\n'}
+[55.237034] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/types/MessageHeader.hpp\n'}
+[55.237109] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/types/Optional.hpp\n'}
+[55.237188] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/types/XRCETypes.hpp\n'}
+[55.237584] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/types/TopicPubSubType.hpp\n'}
+[55.237659] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/participant\n'}
+[55.237731] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/participant/Participant.hpp\n'}
+[55.237792] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/subscriber\n'}
+[55.237856] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/subscriber/Subscriber.hpp\n'}
+[55.237937] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/Root.hpp\n'}
+[55.238015] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/logger\n'}
+[55.238088] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/logger/Logger.hpp\n'}
+[55.238160] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/processor\n'}
+[55.238225] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/processor/Processor.hpp\n'}
+[55.238286] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/scheduler\n'}
+[55.238393] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/scheduler/Scheduler.hpp\n'}
+[55.238473] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/scheduler/PacketScheduler.hpp\n'}
+[55.238569] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/reader\n'}
+[55.238655] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/reader/Reader.hpp\n'}
+[55.238768] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/object\n'}
+[55.238840] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/object/XRCEObject.hpp\n'}
+[55.238928] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/datawriter\n'}
+[55.239001] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/datawriter/DataWriter.hpp\n'}
+[55.239074] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils\n'}
+[55.239143] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/SharedMutexPriority.hpp\n'}
+[55.239213] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/SeqNum.hpp\n'}
+[55.239286] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/Functions.hpp\n'}
+[55.239363] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/Color.hpp\n'}
+[55.239443] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/TokenBucket.hpp\n'}
+[55.239521] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/Conversion.hpp\n'}
+[55.239602] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/SharedMutex.hpp\n'}
+[55.239675] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/ArgumentParser.hpp\n'}
+[55.239813] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/utils/Time.hpp\n'}
+[55.239888] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/publisher\n'}
+[55.239958] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/publisher/Publisher.hpp\n'}
+[55.240028] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport\n'}
+[55.240094] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/p2p\n'}
+[55.240155] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/p2p/AgentDiscoverer.hpp\n'}
+[55.240224] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/p2p/AgentDiscovererLinux.hpp\n'}
+[55.240292] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/stream_framing\n'}
+[55.240362] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/stream_framing/StreamFramingProtocol.hpp\n'}
+[55.240438] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/custom\n'}
+[55.240506] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/custom/CustomAgent.hpp\n'}
+[55.240573] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint\n'}
+[55.240640] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint/SerialEndPoint.hpp\n'}
+[55.240710] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint/IPv6EndPoint.hpp\n'}
+[55.240785] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint/MultiSerialEndPoint.hpp\n'}
+[55.240860] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint/CanEndPoint.hpp\n'}
+[55.240935] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint/CustomEndPoint.hpp\n'}
+[55.241028] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/endpoint/IPv4EndPoint.hpp\n'}
+[55.241104] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/SessionManager.hpp\n'}
+[55.241181] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp\n'}
+[55.241248] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPServerBase.hpp\n'}
+[55.241325] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv6AgentWindows.hpp\n'}
+[55.241401] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPConnection.hpp\n'}
+[55.241475] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv6AgentLinux.hpp\n'}
+[55.241551] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv4AgentWindows.hpp\n'}
+[55.241625] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/tcp/TCPv4AgentLinux.hpp\n'}
+[55.241699] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/discovery\n'}
+[55.241770] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServerWindows.hpp\n'}
+[55.241837] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServerLinux.hpp\n'}
+[55.241955] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/discovery/DiscoveryServer.hpp\n'}
+[55.242116] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/can\n'}
+[55.242195] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/can/CanAgentLinux.hpp\n'}
+[55.242261] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/Server.hpp\n'}
+[55.242330] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/udp\n'}
+[55.242402] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv4AgentWindows.hpp\n'}
+[55.242469] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv4AgentLinux.hpp\n'}
+[55.242543] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv6AgentLinux.hpp\n'}
+[55.242618] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/udp/UDPv6AgentWindows.hpp\n'}
+[55.242693] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/util\n'}
+[55.242759] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/util/InterfaceLinux.hpp\n'}
+[55.242831] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/util/InterfaceWindows.hpp\n'}
+[55.242916] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/TransportRc.hpp\n'}
+[55.242991] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial\n'}
+[55.243057] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial/PseudoTerminalAgentLinux.hpp\n'}
+[55.243129] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial/baud_rate_table_linux.h\n'}
+[55.243204] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial/TermiosAgentLinux.hpp\n'}
+[55.243279] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial/MultiSerialAgentLinux.hpp\n'}
+[55.243360] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial/SerialAgentLinux.hpp\n'}
+[55.243442] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/transport/serial/MultiTermiosAgentLinux.hpp\n'}
+[55.243534] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client\n'}
+[55.243627] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/ProxyClient.hpp\n'}
+[55.243720] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/session\n'}
+[55.243806] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/session/stream\n'}
+[55.243894] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/session/stream/InputStream.hpp\n'}
+[55.244036] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/session/stream/OutputStream.hpp\n'}
+[55.244135] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/session/Session.hpp\n'}
+[55.244213] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/client/session/SessionInfo.hpp\n'}
+[55.244347] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets.cmake\n'}
+[55.244475] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentTargets-release.cmake\n'}
+[55.244579] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/include/uxr/agent/config.hpp\n'}
+[55.244686] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/microxrcedds_agent/LICENSE\n'}
+[55.244795] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfig.cmake\n'}
+[55.244873] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/microxrcedds_agent/cmake/microxrcedds_agentConfigVersion.cmake\n'}
+[55.262692] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mCompleted 'xrceagent'\x1b[0m\n"}
+[55.296612] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] Built target xrceagent\n'}
+[55.318891] (micro_ros_agent) StdoutLine: {'line': b"[ 56%] \x1b[34m\x1b[1mCreating directories for 'micro_ros_agent'\x1b[0m\n"}
+[55.333855] (-) TimerEvent: {}
+[55.395757] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mNo download step for 'micro_ros_agent'\x1b[0m\n"}
+[55.419745] (micro_ros_agent) StdoutLine: {'line': b"[ 68%] \x1b[34m\x1b[1mNo update step for 'micro_ros_agent'\x1b[0m\n"}
+[55.434038] (-) TimerEvent: {}
+[55.447059] (micro_ros_agent) StdoutLine: {'line': b"[ 75%] \x1b[34m\x1b[1mNo patch step for 'micro_ros_agent'\x1b[0m\n"}
+[55.472739] (micro_ros_agent) StdoutLine: {'line': b"[ 81%] \x1b[34m\x1b[1mPerforming configure step for 'micro_ros_agent'\x1b[0m\n"}
+[55.481676] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/vyom/microros_ws/build/micro_ros_agent/micro_ros_agent-prefix/tmp/micro_ros_agent-cache-.cmake\n'}
+[55.508008] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[55.534126] (-) TimerEvent: {}
+[55.634383] (-) TimerEvent: {}
+[55.690147] (micro_ros_agent) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[55.734473] (-) TimerEvent: {}
+[55.834850] (-) TimerEvent: {}
+[55.934100] (micro_ros_agent) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[55.934932] (-) TimerEvent: {}
+[55.940746] (micro_ros_agent) StdoutLine: {'line': b'-- Looking for C++ include pthread.h\n'}
+[56.035072] (-) TimerEvent: {}
+[56.035598] (micro_ros_agent) StdoutLine: {'line': b'-- Looking for C++ include pthread.h - found\n'}
+[56.035765] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[56.119085] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[56.119889] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[56.129115] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_cmake: 3.1.5 (/opt/ros/humble/share/rosidl_cmake/cmake)\n'}
+[56.133154] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[56.135171] (-) TimerEvent: {}
+[56.159480] (micro_ros_agent) StdoutLine: {'line': b'-- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)\n'}
+[56.164475] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)\n'}
+[56.222532] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[56.235318] (-) TimerEvent: {}
+[56.237542] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[56.251492] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[56.275185] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[56.302449] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_fastrtps_shared_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)\n'}
+[56.335458] (-) TimerEvent: {}
+[56.374778] (micro_ros_agent) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[56.380018] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[56.385240] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[56.386026] (micro_ros_agent) StdoutLine: {'line': b'-- Found micro_ros_msgs: 3.0.1 (/home/vyom/microros_ws/install/micro_ros_msgs/share/micro_ros_msgs/cmake)\n'}
+[56.435597] (-) TimerEvent: {}
+[56.488751] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[56.495596] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[56.496524] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/vyom/microros_ws/build/micro_ros_agent\n'}
+[56.517634] (micro_ros_agent) StdoutLine: {'line': b"[ 87%] \x1b[34m\x1b[1mPerforming build step for 'micro_ros_agent'\x1b[0m\n"}
+[56.535749] (-) TimerEvent: {}
+[56.563619] (micro_ros_agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o\x1b[0m\n'}
+[56.563956] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/utils/demangle.cpp.o\x1b[0m\n'}
+[56.564086] (micro_ros_agent) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/Agent.cpp.o\x1b[0m\n'}
+[56.566253] (micro_ros_agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/main.cpp.o\x1b[0m\n'}
+[56.566672] (micro_ros_agent) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o\x1b[0m\n'}
+[56.635876] (-) TimerEvent: {}
+[56.736256] (-) TimerEvent: {}
+[56.836657] (-) TimerEvent: {}
+[56.937110] (-) TimerEvent: {}
+[57.037503] (-) TimerEvent: {}
+[57.137885] (-) TimerEvent: {}
+[57.238340] (-) TimerEvent: {}
+[57.338717] (-) TimerEvent: {}
+[57.439102] (-) TimerEvent: {}
+[57.539472] (-) TimerEvent: {}
+[57.639838] (-) TimerEvent: {}
+[57.740209] (-) TimerEvent: {}
+[57.840597] (-) TimerEvent: {}
+[57.940984] (-) TimerEvent: {}
+[58.041357] (-) TimerEvent: {}
+[58.141736] (-) TimerEvent: {}
+[58.242114] (-) TimerEvent: {}
+[58.342475] (-) TimerEvent: {}
+[58.442842] (-) TimerEvent: {}
+[58.543225] (-) TimerEvent: {}
+[58.643596] (-) TimerEvent: {}
+[58.743948] (-) TimerEvent: {}
+[58.844321] (-) TimerEvent: {}
+[58.944726] (-) TimerEvent: {}
+[59.045100] (-) TimerEvent: {}
+[59.145438] (-) TimerEvent: {}
+[59.245806] (-) TimerEvent: {}
+[59.346175] (-) TimerEvent: {}
+[59.446526] (-) TimerEvent: {}
+[59.546868] (-) TimerEvent: {}
+[59.647211] (-) TimerEvent: {}
+[59.747562] (-) TimerEvent: {}
+[59.847900] (-) TimerEvent: {}
+[59.948247] (-) TimerEvent: {}
+[60.048612] (-) TimerEvent: {}
+[60.148953] (-) TimerEvent: {}
+[60.249241] (-) TimerEvent: {}
+[60.349532] (-) TimerEvent: {}
+[60.449850] (-) TimerEvent: {}
+[60.550203] (-) TimerEvent: {}
+[60.650494] (-) TimerEvent: {}
+[60.750818] (-) TimerEvent: {}
+[60.851082] (-) TimerEvent: {}
+[60.881527] (micro_ros_agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable micro_ros_agent\x1b[0m\n'}
+[60.951226] (-) TimerEvent: {}
+[61.051593] (-) TimerEvent: {}
+[61.151886] (-) TimerEvent: {}
+[61.250511] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target micro_ros_agent\n'}
+[61.251957] (-) TimerEvent: {}
+[61.273737] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mNo install step for 'micro_ros_agent'\x1b[0m\n"}
+[61.298327] (micro_ros_agent) StdoutLine: {'line': b"\x1b[34m\x1b[1mCompleted 'micro_ros_agent'\x1b[0m\n"}
+[61.328302] (micro_ros_agent) StdoutLine: {'line': b'Built target micro_ros_agent\n'}
+[61.338814] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[61.352123] (-) TimerEvent: {}
+[61.396076] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'install'}
+[61.396660] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vyom/microros_ws/build/micro_ros_agent'], 'cwd': '/home/vyom/microros_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'vyom'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs/lib:/home/vyom/ros2_ws/install/p9n_test/lib:/home/vyom/ros2_ws/install/p9n_node/lib:/home/vyom/ros2_ws/install/p9n_example/lib:/home/vyom/ros2_ws/install/p9n_interface/lib:/home/vyom/install/examples_rclcpp_wait_set/lib:/home/vyom/install/examples_rclcpp_minimal_subscriber/lib:/home/vyom/install/examples_rclcpp_minimal_composition/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/vyom'), ('OLDPWD', '/home/vyom'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1346'), ('SYSTEMD_EXEC_PID', '1690'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5802'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vyom/microros_ws/install:/home/vyom/turtlebot3_ws/install:/home/vyom/ros2_ws/install:/home/vyom/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vyom'), ('JOURNAL_STREAM', '8:35873'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vyom'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/opt/ros/humble/bin:/home/vyom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:@/tmp/.ICE-unix/1489,unix/vyom-VivoBook-ASUSLaptop-X515JAB-X515JA:/tmp/.ICE-unix/1489'), ('INVOCATION_ID', '351c8f3a57f4417aac7a172deeb939aa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JL4QN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs:/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:8f81dbcd-1e24-4008-9eac-32b66e978c21'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vyom/microros_ws/build/micro_ros_agent'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vyom/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/vyom/ros2_ws/install/p9n_bringup/lib/python3.10/site-packages:/home/vyom/install/launch_testing_examples/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/home/vyom/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vyom/microros_ws/install/micro_ros_msgs:/home/vyom/microros_ws/install/micro_ros_setup:/home/vyom/turtlebot3_ws/install/turtlebot3_simulations:/home/vyom/turtlebot3_ws/install/turtlebot3_gazebo:/home/vyom/turtlebot3_ws/install/turtlebot3_fake_node:/home/vyom/ros2_ws/install/p9n:/home/vyom/ros2_ws/install/p9n_test:/home/vyom/ros2_ws/install/p9n_node:/home/vyom/ros2_ws/install/p9n_example:/home/vyom/ros2_ws/install/p9n_interface:/home/vyom/ros2_ws/install/cpp_pubsub:/home/vyom/install/examples_rclcpp_wait_set:/home/vyom/install/examples_rclcpp_multithreaded_executor:/home/vyom/install/examples_rclcpp_minimal_timer:/home/vyom/install/examples_rclcpp_minimal_subscriber:/home/vyom/install/examples_rclcpp_minimal_service:/home/vyom/install/examples_rclcpp_minimal_publisher:/home/vyom/install/examples_rclcpp_minimal_composition:/home/vyom/install/examples_rclcpp_minimal_client:/home/vyom/install/examples_rclcpp_minimal_action_server:/home/vyom/install/examples_rclcpp_minimal_action_client:/home/vyom/install/examples_rclcpp_cbg_executor:/home/vyom/install/examples_rclcpp_async_client:/home/vyom/ros2_ws/install/p9n_bringup:/home/vyom/install/launch_testing_examples:/home/vyom/install/examples_rclpy_pointcloud_publisher:/home/vyom/install/examples_rclpy_minimal_subscriber:/home/vyom/install/examples_rclpy_minimal_service:/home/vyom/install/examples_rclpy_minimal_publisher:/home/vyom/install/examples_rclpy_minimal_client:/home/vyom/install/examples_rclpy_minimal_action_server:/home/vyom/install/examples_rclpy_minimal_action_client:/home/vyom/install/examples_rclpy_guard_conditions:/home/vyom/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[61.407434] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[61.407583] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent\n'}
+[61.407661] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent\n'}
+[61.407728] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh\n'}
+[61.407804] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv\n'}
+[61.407891] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh\n'}
+[61.407969] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv\n'}
+[61.408047] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash\n'}
+[61.408123] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh\n'}
+[61.408205] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh\n'}
+[61.408281] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv\n'}
+[61.408355] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv\n'}
+[61.408465] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent\n'}
+[61.408564] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[61.408649] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake\n'}
+[61.408711] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake\n'}
+[61.408787] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/package.xml\n'}
+[61.408906] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent\n'}
+[61.410310] (micro_ros_agent) StdoutLine: {'line': b'-- Set runtime path of "/home/vyom/microros_ws/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent" to ""\n'}
+[61.410760] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/launch\n'}
+[61.410922] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/vyom/microros_ws/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py\n'}
+[61.412320] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[61.452263] (-) TimerEvent: {}
+[61.489215] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 0}
+[61.490144] (-) EventReactorShutdown: {}
