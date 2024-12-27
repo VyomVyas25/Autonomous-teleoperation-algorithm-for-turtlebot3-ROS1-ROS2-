@@ -19,6 +19,7 @@ using namespace std;
 class IrcNode : public rclcpp::Node {
 public:
     IrcNode() : Node("ircNode"), state_(State::MOVING_FORWARD), count_(0) {
+        subscription_0 = this->create_subscription<geometry_msgs::msg::Twist>("/arrow_info", 10, std::bind(&IrcNode::arr_detNode, this, _1));
         subscription_1 = this->create_subscription<sensor_msgs::msg::LaserScan>("/scan", 10, std::bind(&IrcNode::arrowNode, this, _1));
         subscription_2 = this->create_subscription<nav_msgs::msg::Odometry>("/odom", 10, std::bind(&IrcNode::thetaNode, this, _1) );
         publisher_1 = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
@@ -28,12 +29,16 @@ public:
 
 private:
     enum class State { MOVING_FORWARD, STOPPING, ROTATING };
-
-    float linear_velocity_ = 0.5, angular_velocity_ = 0.5, angular_velocity_2, sum, goal_ang, theta, theta_new;
-    std::chrono::duration<float> stop_duration_ = 10s;
+    float direction, deviation, linear_velocity_ = 0.5, angular_velocity_ = 0.5, angular_velocity_2, sum, goal_ang, theta, theta_new;
+    std::chrono::duration<float> stop_duration_ = 5s;
     float rotation_angle_ = M_PI / 2;
     rclcpp::Time start_time_;
     State state_;
+
+    void arr_detNode(const geometry_msgs::msg::Twist &message) {
+        direction = message.linear.z;
+        deviation = message.linear.y;
+    }
 
     void arrowNode(const sensor_msgs::msg::LaserScan &msg) {
         sum = 0;
@@ -70,27 +75,33 @@ private:
         bool is_rotating = state_ == State::ROTATING;
 
         sum = sum / 10;
-        angular_velocity_2 = (abs(sum) > 0.3 ? 0.3 * (sum / abs(sum)) : sum);
+        
         vel.linear.x = (is_moving && linear_velocity_ >= 0.05) ? ((linear_velocity_ > 0.4) ? 0.4 : linear_velocity_) : 0.0;
 
-        if (is_rotating) {
-            vel.angular.z = angular_velocity_;
-        } 
+        if(direction==1 || direction==-1){
+            angular_velocity_2 = (deviation/150 + (abs(sum) > 0.3 ? 0.3 * (sum / abs(sum)) : sum));
+            
+            if (is_rotating) {
+                vel.angular.z = direction*angular_velocity_;
+            } 
 
-        else if(is_stopping){
-            vel.angular.z = 0;
+            else if(is_stopping){
+                vel.angular.z = 0;
+            }
+            else {
+                float orientation_error = theta_new - theta;
+                orientation_error = (orientation_error)>3.14?orientation_error-(6.28*(orientation_error/orientation_error)):orientation_error;
+                vel.angular.z = angular_velocity_2 + 5*((abs(orientation_error) > 0.025) ? 0.5 * orientation_error : 0.0);
+                vel.angular.z = abs(vel.angular.z)>0.5?0.5*abs(vel.angular.z)/vel.angular.z : vel.angular.z;
+            }
         }
         else {
-            float orientation_error = theta_new - theta;
-            orientation_error = (orientation_error)>3.14?orientation_error-(6.28*(orientation_error/orientation_error)):orientation_error;
-            vel.angular.z = angular_velocity_2 + 5*((abs(orientation_error) > 0.025) ? 0.5 * orientation_error : 0.0);
-            vel.angular.z = abs(vel.angular.z)>0.5?0.5*abs(vel.angular.z)/vel.angular.z : vel.angular.z;
-        }
+            angular_velocity_2 = 0;
+            }
 
-        if (angular_velocity_2 < 0.08) {
+        if (angular_velocity_2 < 0.03) {
             angular_velocity_2 = 0;
         }
-
         if (is_moving && linear_velocity_ < 0.05) {
             state_ = State::STOPPING;
             start_time_ = now;
@@ -101,13 +112,14 @@ private:
             state_ = State::MOVING_FORWARD;
             start_time_ = now;
             theta_new = theta; //updated
-        }
+        } 
 
         publisher_1->publish(vel);
         cout << vel.linear.x << " " << vel.angular.z << endl;
     }
 
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscription_0;
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr subscription_1;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscription_2;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_1;
